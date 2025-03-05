@@ -1,0 +1,50 @@
+(deflocalkeys-linux
+# 
+)
+(defalias
+ç RA-c
+ñ RA-n
+ß RA-s
+
+á (macro ' a)
+é (macro ' e)
+í (macro ' i)
+ó (macro ' o)
+ú (macro ' u)
+
+d` `
+d: RA-[
+do RA-S-0
+d- RA-S-]
+
+· RA-.
+- -
+_ S--
+, (fork , (multi (release-key sft) ;) (sft))
+` (macro ` spc)
+. (fork . S-; (sft))
+
+~ S-#
+! S-1
+@ RA-q
+# #
+$ S-4
+% S-5
+^ (macro S-6 spc)
+& S-7
+* S-8
+lp S-9
+rp S-0
+? S-/
+
+^2 RA-2
+^3 RA-3
+€  RA-4
+
+> S-.
+[ [
+] ]
+{ S-[
+} S-]
+| RA-#
+)

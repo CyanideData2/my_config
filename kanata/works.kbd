@@ -1,0 +1,114 @@
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defsrc
+  a k l ; i
+  j c d
+)
+;;
+(defvar
+  doubletap-timeout 100
+  hold-timeout 300
+  dt $doubletap-timeout
+  ht $hold-timeout
+)
+
+(defalias
+  escctrl (tap-hold-press $dt 300 esc lctrl)
+  escctrl (tap-hold-press $dt 300 esc lctrl)
+  accents (tap-hold-release $dt $ht lalt (layer-while-held accents))
+  reverse (tap-hold-release $dt $ht lctrl (layer-while-held reverse))
+  ;; umlaut (tap-hold-release $dt $ht  (layer-while-held umlaut))
+
+  raccents (tap-hold-release $dt $ht ralt(layer-while-held accents))
+  rreverse (tap-hold-release $dt $ht / (layer-while-held reverse))
+  ;; rumlaut (tap-hold-release $dt $ht e (layer-while-held umlaut))
+)
+;;
+(deflayermap (colemak)
+;; home (layer-switch mouse)
+;; pgup (layer-switch qwerty-en)
+PageDown lrld
+
+caps @escctrl
+ralt rctrl
+q q
+w w
+e f
+r p
+t b
+y j
+u l
+i u
+o y
+p ;
+a a
+s r
+d s
+f t
+g g
+h m
+j n
+k e
+l i
+; o
+z z
+x x
+c c
+v d
+b v
+n k
+m h
+lalt @accents
+lctrl @reverse
+ralt @accents
+lctrl @reverse
+)
+;;
+;;   a e i o u 
+;;   n c
+;;   lalt rctrl9
+
+(defalias
+á RA-x
+é RA-g
+í RA-b
+ó RA-.
+ú RA-u
+ñ RA-n
+ç RA-c
+à RA-z
+è RA-f
+ò RA-,
+ä RA-a
+ï RA-i
+ö RA-o
+ü RA-u
+ß RA-s
+)
+
+(deflayer accents
+@á @é @í @ó @ú  
+@ñ @ç @ß
+)
+(deflayer reverse
+ @à @è _ @ò _
+ _ _ _
+)
+(deflayer umlaut
+ @ä _ @ï @ö @ü
+ _ _ _
+)
+
+;; (deflayermap (mouse)
+;; home (layer-switch colemak)
+;; w (movemouse-up 1 1)
+;; a (movemouse-left 1 1)
+;; s (movemouse-down 1 1)
+;; d (movemouse-right 1 1)
+;; q mlft
+;; e mrgt
+;; k (mwheel-up 300 120)
+;; j (mwheel-down 300 120)
+;; )

@@ -1,0 +1,6 @@
+[submodule "nix"]
+	path = nix
+	url = git@github.com:CyanideData2/nix-config.git
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm

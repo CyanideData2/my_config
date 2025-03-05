@@ -1,0 +1,166 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+format = '''
+$python$rust$lua$c$nodejs$deno$java$scala$directory$character 
+'''
+right_format = '''
+$all$git_branch$git_commit$git_state$git_metrics
+'''
+
+# [directory]
+# fish_style_pwd_dir_length = true
+
+[character]
+format = '[❯](#cc241d)[❯](#d79921)[❯](#98971a)'
+error_symbol = '[❯❯❯](#cc241d)'
+[battery]
+disabled = true
+[git_branch]
+format =  '[$symbol$branch(:$remote_branch)]($style)'
+
+
+
+
+[bun]
+format = "[$symbol]($style)"
+
+[buf]
+format = "[$symbol]($style)"
+
+[c]
+format = "[$symbol]($style)"
+detect_folders = ["src/main.c"]
+
+[cmake]
+format = "[$symbol]($style)"
+
+[cobol]
+format = "[$symbol]($style)"
+
+[crystal]
+format = "[$symbol]($style)"
+
+[daml]
+format = "[$symbol]($style)"
+
+[dart]
+format = "[$symbol]($style)"
+
+[deno]
+format = "[$symbol]($style)"
+
+[dotnet]
+format = "[$symbol(🎯 $tfm )]($style)"
+
+[elixir]
+format = '[$symbol]($style)'
+
+[elm]
+format = '[$symbol]($style)'
+
+[erlang]
+format = '[$symbol]($style)'
+
+[fennel]
+format = '[$symbol]($style)'
+
+[gleam]
+format = '[$symbol]($style)'
+
+[golang]
+format = '[$symbol]($style)'
+
+[gradle]
+format = '[$symbol]($style)'
+
+[haxe]
+format = '[$symbol]($style)'
+
+[helm]
+format = '[$symbol]($style)'
+
+[java]
+format = '[$symbol]($style)'
+
+[julia]
+format = '[$symbol]($style)'
+
+[kotlin]
+format = '[$symbol]($style)'
+
+[lua]
+format = '[$symbol]($style)'
+symbol = ' '
+
+[meson]
+format = '[$symbol]($style)'
+
+[nim]
+format = '[$symbol]($style)'
+
+[nodejs]
+format = '[$symbol]($style)'
+
+[ocaml]
+format = '[$symbol(\($switch_indicator$switch_name\) )]($style)'
+
+[opa]
+format = '[$symbol]($style)'
+
+[perl]
+format = '[$symbol]($style)'
+
+[php]
+format = '[$symbol]($style)'
+
+[pulumi]
+format = '[$symbol$stack]($style)'
+
+[purescript]
+format = '[$symbol]($style)'
+
+[python]
+format = '[$symbol]($style)'
+
+[quarto]
+format = '[$symbol]($style)'
+
+[raku]
+format = '[$symbol]($style)'
+
+[red]
+format = '[$symbol]($style)'
+
+[rlang]
+format = '[$symbol]($style)'
+
+[ruby]
+format = '[$symbol]($style)'
+
+[rust]
+format = '[$symbol]($style)'
+
+[solidity]
+format = '[$symbol]($style)'
+
+[typst]
+format = '[$symbol]($style)'
+
+[scala]
+format = '[$symbol]($style)'
+
+[swift]
+format = '[$symbol]($style)'
+
+[vagrant]
+format = '[$symbol]($style)'
+
+[vlang]
+format = '[$symbol]($style)'
+
+[zig]
+format = '[$symbol]($style)'
