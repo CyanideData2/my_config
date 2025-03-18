@@ -1,8 +1,8 @@
-set scroll-step 80
-map <C-n> feedkeys "<C-Down>"
-map <C-e> feedkeys "<C-Up>"
-map <C-m> feedkeys "<C-Left>"
-map <C-i> feedkeys "<C-Right>"
+set scroll-step 20
+map l scroll up
+# map j scroll left
+map k scroll down
+# map h scroll right
 
 set notification-error-bg       "#282828" # bg
 set notification-error-fg       "#fb4934" # bright:red

@@ -1,0 +1,36 @@
+
+arch = [
+    #OS
+    "linux",
+    "linux-firmware",
+    "mkinitcpio-firmware",
+    "base",
+    "fish",
+    "networkmanager",
+    "ntfs-3g",
+    "paru",
+    "metapac",
+    "pass",
+
+    "vulkan-radeon",
+    "lib32-alsa-plugins",
+    "lib32-libxslt",
+    "lib32-mpg123",
+    "lib32-openal",
+    "lib32-sqlite",
+    "lib32-vulkan-radeon",
+    "pipewire",
+    "pipewire-alsa",
+    "wireplumber",
+    "bluez",
+    "bluez-utils",
+
+    "powertop",
+    "tlp",
+    "cups",
+    "alsa",
+    "kanata-bin",
+    "wget",
+    "tree",
+    "fastfetch", #neofetch
+]

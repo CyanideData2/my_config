@@ -1,0 +1,34 @@
+arch = [
+    "jupyter-notebook",
+    "git",
+    "starship",
+    "tmux",
+    "neovim",
+    "python-pynvim",
+    "valgrind",
+    "jdk17-openjdk",
+    "base-devel",
+    "bear",
+    "deno",
+    "docker",
+    "qmk",
+    "sbt",
+    "jre-openjdk",
+    "r",
+]
+cargo = [
+    #OS
+    "zoxide",
+    "du-dust",
+    "sccache",
+    "ripgrep",
+    "eza",
+    "bat",
+    "cargo-binstall",
+    "cargo-update",
+
+    #Desktop Environment
+    "bottom",
+]
+rustup = ["stable-x86_64-unknown-linux-gnu"]
+

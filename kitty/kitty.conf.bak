@@ -1,5 +1,4 @@
 ##General
-shell fish
 font_family      SauceCodeProNFM
 bold_font        SauceCodeProNFM-Bold
 italic_font      SauceCodeProNFM-Italic
@@ -7,6 +6,7 @@ bold_italic_font SauceCodeProNFM-BoldItalic
 font_size 13.0
 tab_bar_edge bottom
 tab_bar_style powerline
+
 
 ##Theme
 # foreground #ebdbb2
@@ -34,6 +34,6 @@ clipboard_control write-primary write-clipboard no-append
 
 
 # BEGIN_KITTY_THEME
-# Gruvbox Dark Soft
+# Gruvbox Material Dark Soft
 include current-theme.conf
 # END_KITTY_THEME
