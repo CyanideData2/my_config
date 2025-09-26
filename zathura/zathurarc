@@ -1,7 +1,7 @@
 set scroll-step 20
-map l scroll up
+map l feedkeys "<C-Up>"
 # map j scroll left
-map k scroll down
+map k feedkeys "<C-Down>"
 # map h scroll right
 
 set notification-error-bg       "#282828" # bg

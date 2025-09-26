@@ -1,25 +1,33 @@
 arch = [
+    "clang",
+    "codelldb-bin",
+    "typst",
+    "typstyle",
     "jupyter-notebook",
+    "python-matplotlib",
+    "python-scikit-learn",
+    "python-pandas",
+    "nodejs",
+    "npm",
     "git",
     "starship",
     "tmux",
+
     "neovim",
     "python-pynvim",
+
     "valgrind",
     "jdk17-openjdk",
     "base-devel",
     "bear",
     "deno",
     "docker",
+    "docker-compose",
     "qmk",
     "sbt",
     "jre-openjdk",
-    "r",
-]
-cargo = [
-    #OS
     "zoxide",
-    "du-dust",
+    "dust",
     "sccache",
     "ripgrep",
     "eza",
@@ -29,6 +37,8 @@ cargo = [
 
     #Desktop Environment
     "bottom",
+    "r",
 ]
-rustup = ["stable-x86_64-unknown-linux-gnu"]
-
+pipx = [
+    "jupytext"
+]

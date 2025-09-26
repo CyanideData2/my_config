@@ -153,6 +153,7 @@
 			"tooltip-format": "{ifname} via {gwaddr} ",
 			"format-linked": "{ifname} (No IP) ",
 			"format-disconnected": "Disconnected ⚠",
+			// "on-click": "kitty --class floating sh -c impala",
 			"on-click": "kitty --class floating sh -c nmtui",
 			//"format-alt": "{ifname}: {ipaddr}/{cidr}"
 		},

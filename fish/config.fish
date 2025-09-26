@@ -8,9 +8,12 @@ set -gx PATH "$PATH:/home/daniel/.local/share/coursier/bin"
 
 set -gx PATH "$PATH:/home/daniel/.cache/scalacli/local-repo/bin/scala-cli"
 
+alias uw="exec uwsm start default"
 set -x EDITOR 'nvim'
 alias vim="nvim"
 alias vimp="nvim -c\"set rtp+=.\""
+
+alias osu='osu-lazer && pkill -f opentabletdriver'
 
 # alias cdf="cd \$(find . -type d -print | fzf)"
 alias cdv="cd ~/V;cd \$(find . -type d -print | fzf)"

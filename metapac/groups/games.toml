@@ -1,0 +1,5 @@
+arch = [
+    "steam",
+    "osu-lazer-bin",
+    "dolphin-emu",
+]

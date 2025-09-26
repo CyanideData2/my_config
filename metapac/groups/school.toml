@@ -1,0 +1,7 @@
+arch = [
+"qemu-base",
+"libvirt",
+"edk2-ovmf",
+"virt-manager",
+"dnsmasq",
+]

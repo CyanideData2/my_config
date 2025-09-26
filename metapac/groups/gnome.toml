@@ -1,0 +1,5 @@
+
+arch = [
+"gnome",
+"gnome-browser-connector"
+]
