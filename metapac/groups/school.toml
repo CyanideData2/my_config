@@ -1,7 +1,7 @@
 arch = [
-"qemu-base",
-"libvirt",
-"edk2-ovmf",
-"virt-manager",
-"dnsmasq",
+# Windows
+"wine",
+"virtualbox",
+"virtualbox-guest-utils-nox",
+"virtualbox-host-modules-arch",
 ]

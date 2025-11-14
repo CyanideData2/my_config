@@ -29,7 +29,7 @@ arch = [
     "xdg-utils-mimeo",
     "mimeo",
     "xdg-desktop-portal-hyprland",
-    "anyrun-git",
+    # "anyrun-git",
     "bluetui",
     "clipse",
     "dolphin",
@@ -44,7 +44,6 @@ arch = [
     "python-screeninfo",
     "python-xlib",
 
-    "getnf",
     "ttf-nerd-fonts-symbols",
     "ttf-sourcecodepro-nerd",
     "ttf-firacode-nerd",

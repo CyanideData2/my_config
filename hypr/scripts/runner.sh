@@ -10,5 +10,4 @@ selection=$(find ~/ \
 	-type f \
 	-print \
 	| fzf)
-xdg-open "$selection"
-disown
+hyprctl dispatch exec xdg-open "$selection"

@@ -5,9 +5,9 @@
 					  // "width": 1280, // Waybar width
 		"spacing": 4, // Gaps between modules (4px)
 					  // Choose the order of the modules
-		"modules-left": ["hyprland/workspaces", "backlight","pulseaudio", "bluetooth" , "custom/updates"],
+		"modules-left": ["hyprland/workspaces", "backlight","pulseaudio", "custom/updates"],
 		"modules-center": [],
-		"modules-right": ["network","cpu", "memory", "battery", "tray", "clock", "custom/notification"],
+		"modules-right": ["tray", "bluetooth", "network", "battery", "clock", "custom/notification"],
 		// Modules configuration
 		"hyprland/workspaces": {
 			"disable-scroll": true,
@@ -32,9 +32,9 @@
 			"tooltip": false,
 			"format": "{icon}",
 			"format-icons": {
-				"notification": "<span foreground='red'><sup></sup></span>",
+				"notification": "",
 				"none": "",
-				"dnd-notification": "<span foreground='red'><sup></sup></span>",
+				"dnd-notification": "<span foreground='red' ><sup></sup></span>",
 				"dnd-none": "",
 				"inhibited-notification": "<span foreground='red'><sup></sup></span>",
 				"inhibited-none": "",
@@ -135,9 +135,9 @@
 				"warning": 30,
 				"critical": 15
 			},
-			"format": "{capacity}% {icon}",
-			"format-charging": "{capacity}% 🗲",
-			"format-plugged": "{capacity}% ",
+			"format": "{icon}  {capacity}%",
+			"format-charging": " {capacity}%",
+			"format-plugged": " {capacity}%",
 			"format-alt": "{time} {icon}",
 			// "format-good": "", // An empty format will hide the module
 			// "format-full": "",
@@ -148,7 +148,7 @@
 		},
 		"network": {
 			//"interface": "wlan0", // (Optional) To force the use of this interface
-			"format-wifi": "  {essid} {bandwidthDownBytes}",
+			"format-wifi": "   {essid} {bandwidthDownBytes}",
 			"format-ethernet": "{ipaddr}/{cidr} ",
 			"tooltip-format": "{ifname} via {gwaddr} ",
 			"format-linked": "{ifname} (No IP) ",
@@ -158,11 +158,11 @@
 			//"format-alt": "{ifname}: {ipaddr}/{cidr}"
 		},
 		"pulseaudio": {
-			// "scroll-step": 10, // %, can be a float
-			"format": "{volume}%{icon} {format_source}",
-			"format-bluetooth": "{volume}% {icon} {format_source}",
-			"format-bluetooth-muted": " {icon} {format_source}",
-			"format-muted": " {format_source}",
+			"scroll-step": 1, // %, can be a float
+			"format": "{volume}% {icon}",
+			"format-bluetooth": "{volume}% {icon}",
+			"format-bluetooth-muted": " {icon}",
+			"format-muted": " ",
 			"format-source": "{volume}% ",
 			"format-source-muted": "",
 			"format-icons": {
@@ -172,7 +172,7 @@
 				"phone": "",
 				"portable": "",
 				"car": "",
-				"default": ["", "", ""]
+				"default": ["", ""]
 			},
 			"on-click": "pavucontrol"
 		},
