@@ -161,18 +161,18 @@
 			"scroll-step": 1, // %, can be a float
 			"format": "{volume}% {icon}",
 			"format-bluetooth": "{volume}% {icon}",
-			"format-bluetooth-muted": " {icon}",
+			"format-bluetooth-muted": "  ",
 			"format-muted": " ",
 			"format-source": "{volume}% ",
 			"format-source-muted": "",
 			"format-icons": {
-				"headphone": "",
+				"headphone": "󰓃",
 				"hands-free": "",
 				"headset": "",
 				"phone": "",
 				"portable": "",
 				"car": "",
-				"default": ["", ""]
+				"default": [" ", " "]
 			},
 			"on-click": "pavucontrol"
 		},

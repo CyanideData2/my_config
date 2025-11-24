@@ -55,7 +55,15 @@ arch = [
     "telegram-desktop",
     "spotify",
     "obsidian",
+
     # Aya remote connection
     "tailscale",
     "remmina",
+
+	# Tidal Haskell Music
+	"jack2",
+	"qjacket"
+	"ghc",
+	"ghc-libs",
+	"haskell-{tidal,bifunctors,colour,hosc,mwc-random,network,primitive,random,vector,microspec}"
 ]
