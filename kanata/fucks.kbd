@@ -46,7 +46,7 @@
 (deflayer numsym
   _    @! @@ @# @$  @%     @^ @& @* @lp @rp _    _
   @oscontrol    <  @{ =  @}  @>     _  @[ @- @] _ @oscontrol
-  _    _  @| @_ @~  _      _  _  + _  \ _
+  _    _  @| @_ @~  @€      _  _  + _  \ _
                       _ _ _   _ _ _
 )
 (deflayer oscontrol
@@ -85,12 +85,12 @@
 
   tabctrl (tap-hold 100 $ht tab lctrl)
   bspcalt (tap-hold 100 $ht bspc rctrl)
-  layouts (tap-dance 200 (lrld (layer-switch gaming) (layer-switch empty)))
+  layouts (tap-dance 200 ((layer-switch colemak) (layer-switch gaming) (layer-switch empty)))
 )
 (deflayer gaming
-  q        w e r t y   _ _ ▲ _ _   _  @layouts
-  @escctrl   a s d f g   _ ◀ ▼ ▶ _   return
-  lsft       z x c v _   _ _ _ _ _   _
+  q          w e r t y   u i o p _   bspc  @layouts
+  @escctrl   a s d f g   h j k l _   return
+  lsft       z x c v b   _ _ _ , _   _
           _ spc _   _ spc _
 )
 (deflayer empty
