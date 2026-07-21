@@ -20,6 +20,7 @@ main() {
 	local theme
   theme=$(get_theme "$THEME_OPTION" "$DEFAULT_THEME")
 	tmux source-file "$CURRENT_DIR/tmux-gruvbox-${theme}.conf"
+	# tmux source-file "$CURRENT_DIR/kanawaga.conf"
 }
 
 main

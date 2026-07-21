@@ -1,32 +1,35 @@
-arch = [
+arch = { packages =[
     "clang",
     "codelldb-bin",
     "typst",
+    "tinymist",
     "typstyle",
+    "typstyle-debug",
     "jupyter-notebook",
+    "python-black",
     "python-matplotlib",
+    "python-tabulate",
     "python-scikit-learn",
     "python-pandas",
     "nodejs",
     "npm",
     "git",
+    "lazygit",
     "starship",
-    "tmux",
 
     "neovim",
+    "tree-sitter-cli",
     "python-pynvim",
 
     "valgrind",
     "jdk17-openjdk",
     "base-devel",
     "bear",
-    "deno",
     "docker",
     "docker-compose",
-    "qmk",
+
     "sbt",
     "jre-openjdk",
-    "zoxide",
     "dust",
     "sccache",
     "ripgrep",
@@ -34,11 +37,6 @@ arch = [
     "bat",
     "cargo-binstall",
     "cargo-update",
-
-    #Desktop Environment
-    "bottom",
+    "hyperfine",
     "r",
-]
-pipx = [
-    "jupytext"
-]
+]}

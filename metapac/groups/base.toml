@@ -1,21 +1,27 @@
-
-arch = [
+arch = {
+packages = [
     #OS
     "linux",
     "linux-firmware",
     "mkinitcpio-firmware",
+    "ly",
     "base",
     "kitty",
+    "tmux",
     "fish",
     "networkmanager",
+    "tailscale",
+
     "python",
     "python-dbus",
     "iwd",
     "impala",
     "openssl",
     "ntfs-3g",
-    "paru",
+    "yay",
+    "pacman-contrib",
     "metapac",
+    "decman",
     "pass",
     "unrar",
     "unzip",
@@ -30,40 +36,14 @@ arch = [
 
     "powertop",
     "tlp",
+    "bottom",
     "cups",
+    "power-profiles-daemon",
     "kanata-bin",
     "wget",
     "tree",
-    "fastfetch", #neofetch
-
-    # Apps
-    "zen-browser-bin",
-    "chromium",
-    "tor-browser-bin",
-    "rnote",
-    "pika-backup",
-    "qbittorrent",
+    "zoxide",
+    "uwufetch",
     "yt-dlp",
-    "vlc",
-    "vlc-plugin-ffmpeg",
-    "haruna",
-    "img2pdf",
-    "gparted",
-    "inkscape",
-    "wacomtablet",
-    # "opentabletdriver",
-    "telegram-desktop",
-    "spotify",
-    "obsidian",
-
-    # Aya remote connection
-    "tailscale",
-    "remmina",
-
-	# Tidal Haskell Music
-	"jack2",
-	"qjacket"
-	"ghc",
-	"ghc-libs",
-	"haskell-{tidal,bifunctors,colour,hosc,mwc-random,network,primitive,random,vector,microspec}"
-]
+    "teamtype"
+]}

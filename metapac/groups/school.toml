@@ -1,7 +1,10 @@
-arch = [
+arch = { packages =[
 # Windows
 "wine",
 "virtualbox",
 "virtualbox-guest-utils-nox",
 "virtualbox-host-modules-arch",
-]
+
+"python-seaborn",
+    "sagemath",
+]}

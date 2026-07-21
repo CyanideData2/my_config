@@ -1,0 +1,45 @@
+(deflocalkeys-linux  
+  closed 40    ;; acute accent (dead key)  
+  open 26
+  quote 12
+  ñ 39    ;; eñe  
+  ç 43    ;; c-cedilla  
+  ¡ 13
+)  
+(defalias
+ç RA-c
+ñ RA-n
+ß RA-s
+
+dead` (multi ` spc)
+char` `
+
+' quote
+· RA-3
+¨ S-'
+- /
+/ S-7
+_ S-/
+~ RA-4
+! S-1
+@ RA-2
+# RA-3
+$ S-4
+€ RA-e
+% S-5
+^ S-`
+& S-6
+* S-8
+lp S-8
+rp S-9
+? S-/
+> S-.
+[ RA-open
+] RA-]
+{ RA-closed
+} RA-ç
+| S-\
+\ S-o
+, (fork , (multi (release-key sft) ;) (sft))
+. (fork . S-; (sft))
+)

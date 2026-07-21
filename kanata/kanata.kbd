@@ -1,15 +1,56 @@
-(include system_symbols.kbd)
+(include es_symbols.kbd)
 (defcfg
   process-unmapped-keys yes
+   block-unmapped-keys yes
+  ;; override-release-on-activation yes
 )
 
+;; (defsrc
+;;   tab       q   w   e   r   t     y   u   i   o   p   [   home
+;;   caps      a   s   d   f   g     h   j   k   l   ;   '
+;;   lsft      z   x   c   v   b     n   m   ,   .   /   rsft
+;;                   lmet lalt   spc   ralt <
+;; )
 (defsrc
-  a k l ; i
-  j c d \ '
-  lalt rctrl
-  lctrl /
+  1       2   3   4   5   6     7   8   9   0   -   =       home
+  tab     q   w   e   r   t     u   i   o   p   [   ]
+  caps    a   s   d   f   g     j   k   l   ;   '   ret
+                  x   c   v     n   m   ,
 )
-;;
+(deflayer colemak
+  @tabctrl   q   w   f   p   b        j   l   u   y  @'  bspc    @layouts 
+  @escctrl   a   r   s   t   g        m   n   e   i   o   @retctrl
+  lsft       z   x   c   d   v        k   h   @,  @.  @-   rsft
+            @sym @metaccent lalt   @os spc @sym
+)
+(deflayermap (accents)
+r (multi esc @dead`)
+t (multi esc @¨)
+n (multi esc @ñ)
+c (multi esc @ç)
+. (multi esc @·)
+' (multi esc @char`)
+)
+
+(deflayer  numsym
+    @~  @!  @@   @#   @$  @%      @&  7  8  9  @\   _  _
+    @?  @{  @lp  @rp   @} =       @^  4  5  6  +   _  
+    @|   <  @[   @]   @>  @€      @*  1  2  3 @/   _
+                  _    _  _       _  _    0
+)
+(deflayer os
+  _   _ 🔉 ▲ 🔊 🔇    _ 7 8 9 _ _ _
+  _   🔅 ◀ ▼ ▶  🔆    _ 4 5 6 _ _
+  _   _ _ _ _ _    _ 1 2 3 _ _
+          _ _ _   _ _ 0
+)
+
+(deflayermap (shift-exceptions)
+, (multi (release-key sft) ; lsft)
+. S-;
+)
+
+
 (defvar
   doubletap-timeout 100
   hold-timeout 150
@@ -17,96 +58,22 @@
   ht $hold-timeout
 )
 (defalias
-  ;; escctrl (tap-hold-press $dt 300 esc lctrl)
+  os (layer-while-held os)
   escctrl (tap-hold-press $dt 300 esc lctrl)
-  returnctrl (tap-hold-press $dt 300 return rctrl)
-  accents (tap-hold 100 $ht (one-shot-press 300 (layer-while-held accents)) lmet )
-  reverse (tap-hold 100 100 (one-shot-press 300 (layer-while-held reverse)) lsft )
-  ;; umlaut (tap-hold-release $dt $ht  (layer-while-held umlaut))
+  retctrl(tap-hold-press $dt 300 return rctrl)
+  sym (layer-while-held numsym)
 
-  raccents (tap-hold 100 $ht (one-shot-press 300 (layer-while-held accents)) ralt )
-  rreverse (tap-hold 100 100 (one-shot-press 300 (layer-while-held reverse)) rsft )
-  ;; rumlaut (tap-hold-release $dt $ht e (layer-while-held umlaut))
+  metaccent (tap-hold 100 $ht ' lmet )
+  symaccent (tap-hold 100 $ht (one-shot-press 300 (layer-while-held accents)) @sym )
+
+
+  tabctrl (tap-hold 100 $ht tab lctrl)
+  bspcalt (tap-hold 100 $ht bspc rctrl)
+  layouts (tap-dance 200 ((layer-switch colemak) (layer-switch empty) ))
 )
-;;
-(deflayermap (colemak)
-home (tap-dance 500 (lrpv (layer-switch qwerty-en) (layer-switch mouse)))
-PageDown lrld
-caps @escctrl
-return @returnctrl
-
-lalt @accents
-lsft @reverse
-
-ralt @raccents
-esc caps
-rsft @rreverse
-
-
-q q
-w w
-e f
-r p
-t b
-y j
-u l
-i u
-o y
-p ;
-a a
-s r
-d s
-f t
-g g
-h m
-j n
-k e
-l i
-; o
-z z
-x x
-c c
-v d
-b v
-n k
-m h
-)
-;;
-;;   a e i o u 
-;;   n c
-;;   lalt rctrl9
-
-(deflayer accents
-@á @é @í @ó @ú  
-@ñ @ç @ß @~ `
-_ _
-(one-shot-press 300 (layer-while-held umlaut)) (one-shot-press 300 (layer-while-held umlaut))
-)
-
-(deflayer reverse
- @à @è _ @ò _
- _ _ _ _ _
-(one-shot-press 300 (layer-while-held umlaut)) (one-shot-press 300 (layer-while-held umlaut))
-_ _
-)
-(deflayer umlaut
- @ä _ @ï @ö @ü
- _ _ _ _ _
- _ _
- _ _
-)
-
-(deflayermap (mouse)
-home (layer-switch colemak)
-w (movemouse-accel-up 10 300 1 10)
-a (movemouse-accel-left 10 300 1 10)
-s (movemouse-accel-down 10 300 1 10)
-d (movemouse-accel-right 10 300 1 10)
-q mlft
-e mrgt
-k (mwheel-up 300 120)
-j (mwheel-down 300 120)
-)
-(deflayermap (qwerty-en)
-home (layer-switch colemak)
+(deflayer empty
+  _   _ _ _ _ _   _ _ _ _ _   _  @layouts
+  _   _ _ _ _ _   _ _ _ _ _   _
+  _   _ _ _ _ _   _ _ _ _ _   _
+          _ _ _   _ _ _
 )

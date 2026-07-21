@@ -2,10 +2,7 @@
 (defcfg
   process-unmapped-keys yes
   block-unmapped-keys yes
-  linux-dev-names-exclude ("Teclado de Víctor Hurtado")
-  ;; override-release-on-activation yes
 )
-
 ;; (defsrc
 ;;   tab       q   w   e   r   t     y   u   i   o   p   [   home
 ;;   caps      a   s   d   f   g     h   j   k   l   ;   '

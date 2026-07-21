@@ -5,7 +5,7 @@
 add_newline = false
 
 format = '''
-$python$rust$lua$c$nodejs$deno$java$scala$directory$character 
+$rlang$typst$python$rust$lua$c$nodejs$deno$java$scala$directory$character 
 '''
 right_format = '''
 $all$git_branch$git_commit$git_state$git_metrics

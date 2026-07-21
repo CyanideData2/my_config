@@ -7,6 +7,9 @@
 [submodule "nvim"]
 	path = nvim
 	url = git@github.com:CyanideData2/nvim-config.git
+[submodule "luasnippets"]
+	path = nvim/luasnippets
+	url = git@github.com:CyanideData2/snippets.git
 [submodule "kanata-configs"]
 	path = kanata-configs
 	url = git@github.com:NullSeile/kanata-configs.git

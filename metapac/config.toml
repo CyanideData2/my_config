@@ -16,7 +16,7 @@ enabled_backends = ["arch", "cargo", "pipx"]
 # Default: None
 hostname_groups_enabled = true
 [hostname_groups]
-cyanide-laptop = ["base", "dev", "hyprland", "gnome", "games", "school"]
+cyanide-laptop = ["base", "dev", "hyprland", "gui","games", "school"]
 cyanide-server = ["dev"]
 # Since pacman, paru, pikaur and yay all operate on the same package database
 # they are mutually exclusive and so you must pick which one you want
@@ -24,14 +24,8 @@ cyanide-server = ["dev"]
 # Must be one of: ["pacman", "paru", "pikaur", "yay"]
 # Default: "pacman"
 [arch]
-package_manager = "paru"
+package_manager = "yay"
 
-# Whether to default to installing flatpak packages systemwide or for the
-# current user. This setting can be overridden on a per-package basis using
-# { systemwide = false|true }.
-# Default: true
-[flatpak]
-systemwide = false
 
 # Whether to use the [hostname_groups] config table to decide which
 # group files to use or to use all files in the groups folder.
